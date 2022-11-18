@@ -1,14 +1,36 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page session="false" %>
 <html>
 <head>
 	<title>Home</title>
 </head>
-<body>
-<h1>
-	Hello world!  
-</h1>
+<header>	
+	<h1></h1>
+	<div>
+		<div>
+			호텔 또는 도시
+		</div>		
+		<div>
+			체크인
+		</div>
+		<div>
+			체크아웃
+		</div>
+	</div>	
+</header>
+<section>
+	<div>a</div>
+	<div>b</div>
+	<div>c</div>
+</section>
+<section>
+	<canvas width="400" height="300">
+		Your browser doesn't support the HTML5 element canvas.
+	</canvas>
+</section>
+<footer>
 
-<P>  The time on the server is ${serverTime}. </P>
-</body>
+</footer>
 </html>
