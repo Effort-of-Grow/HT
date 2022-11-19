@@ -48,35 +48,38 @@
 
 <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<!-- Vue.js  -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 
 <!-- 헤더 파일 -->
-<div>
-<div style="width: auto; margin: auto; height:45px; display: flex; justify-content: space-between; margin-bottom: 10px; margin-left:45%;">
-	<div style="font-size: 15pt; margin-top: 10px;">
-		<a href="${cpath }" style="color:black;">HOTEL</a>
-	</div>
-	<div style="display: flex;">
-		<div>
-			<a href="${cpath }/search">
-			 	<img height="40px" src="https://cdn.dailyhotel.com/ux/nav-search-ic@2x.png">
-			</a>
-		</div>
-		<div class="navbar-collapse collapse">
-			<ul class="nav navbar-nav">
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown"  aria-expanded="false" role="button" style="padding:0px;">
-						<img id="open_submenu" height="40px" src="https://cdn.dailyhotel.com/ux/nav-short-ic@2x.png">						
+<header>
+	<div style="border-bottom: 1px solid #d3d3d3; vertical-align: middle; margin-bottom: 10px;">
+		<div style="width: auto; margin: auto; height:45px; display: flex; justify-content: space-between; margin-left:45%;">
+			<div style="font-size: 15pt; margin-top: 10px;">
+				<a href="${cpath }" style="color:black;">HOTEL</a>
+			</div>
+			<div style="display: flex;">
+				<div>
+					<a href="${cpath }/search">
+					 	<img height="40px" src="https://cdn.dailyhotel.com/ux/nav-search-ic@2x.png">
 					</a>
-					<ul class="dropdown-menu" role="menu" style="position:inherit;">
-						<li>
-							<a href="/login">로그인</a>
-						</li>	
-					</ul>									
-				</li>
-			</ul>		
-		</div>		
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown"  aria-expanded="false" role="button" style="padding:0px;">
+								<img id="open_submenu" height="40px" src="https://cdn.dailyhotel.com/ux/nav-short-ic@2x.png">						
+							</a>
+							<ul class="dropdown-menu" role="menu" style="position:inherit;">
+								<li>
+									<a href="/login">로그인</a>
+								</li>	
+							</ul>									
+						</li>
+					</ul>		
+				</div>		
+			</div>
+		</div>
 	</div>
-</div>
-</div>
-<body>
+</header>

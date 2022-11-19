@@ -36,6 +36,8 @@ body {font-family: "Lato", sans-serif;}
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
+<!-- 개발 스크립트. 도움되는 콘솔 경고를 포함. -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
 	<div class="sidenav">
@@ -49,8 +51,8 @@ body {font-family: "Lato", sans-serif;}
 		    <div class="login-form">
 			    <div style="width: 100%; display: flex;"> 
 				    <div style="width: 100%;">              
-						<div class="form-group">
-							<label>아이디</label>
+						<div class="form-group">							
+							<label id="app">{{ title }}</label>
 							<input type="text" class="form-control" placeholder="User ID">
 						</div>
 						<div class="form-group">
@@ -69,4 +71,12 @@ body {font-family: "Lato", sans-serif;}
 	    </div>
  	</div> 
 </body>
+<script>
+new Vue({
+  el: '#app', 
+  data: {
+    title: '아이디'
+  }   
+})
+</script>
 </html>
