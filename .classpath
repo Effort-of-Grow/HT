@@ -30,7 +30,7 @@
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/mihyun/Downloads/ojdbc8-full/ojdbc8.jar">
+	<classpathentry kind="lib" path="C:/Users/sungw/Desktop/ojdbc8-full/ojdbc8.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
@@ -41,17 +41,17 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/mihyun/Downloads/ojdbc8-full/oraclepki.jar">
+	<classpathentry kind="lib" path="C:/Users/sungw/Desktop/ojdbc8-full/oraclepki.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/mihyun/Downloads/ojdbc8-full/osdt_cert.jar">
+	<classpathentry kind="lib" path="C:/Users/sungw/Desktop/ojdbc8-full/osdt_cert.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/mihyun/Downloads/ojdbc8-full/osdt_core.jar">
+	<classpathentry kind="lib" path="C:/Users/sungw/Desktop/ojdbc8-full/osdt_core.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
