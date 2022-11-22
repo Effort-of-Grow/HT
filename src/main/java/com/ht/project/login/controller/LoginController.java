@@ -14,4 +14,13 @@ public class LoginController {
 	public String lolgin(Locale locale, Model model) {								
 		return "/login/loginPage";
 	}
+	
+	@RequestMapping(value = "/consentTerm", method = RequestMethod.GET)
+	public String consentTerm(Locale locale, Model model) {								
+		return "/login/consentTermPage";
+	}
+	@RequestMapping(value = "/signup", method = RequestMethod.GET)
+	public String signup(Locale locale, Model model) {								
+		return "/login/signupPage";
+	}
 }

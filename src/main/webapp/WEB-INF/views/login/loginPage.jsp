@@ -64,7 +64,7 @@ body {font-family: "Lato", sans-serif;}
 						<button type="submit" class="btn btn-black" style="margin-left: 10px; width: 95px; height: 80px; margin-top:6px;">로그인</button>
 					</div>
 			    </div>                                
-				<button type="submit" class="btn btn-secondary">회원가입</button>
+				<button type="submit" class="btn btn-secondary" onclick="location.href='consentTerm'">회원가입</button>
 			    <button type="submit" class="btn btn-secondary">아이디 찾기</button>
 			    <button type="submit" class="btn btn-secondary">비밀번호 찾기</button>               
 		    </div>
