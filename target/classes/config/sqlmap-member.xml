@@ -8,6 +8,14 @@
 	<select id="selectOne" resultType="String">
 		 SELECT ADDRESS  FROM TEST 
 	</select>
+	<select id="selectUser" resultType="String">
+		SELECT t.NAME 
+			FROM TEST t
+			WHERE
+				t.ID = #{userId} 
+			AND
+				t.PASSWORD = #{password}
+	</select>
 </mapper>
 
 

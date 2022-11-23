@@ -73,7 +73,7 @@
 							</a>
 							<ul class="dropdown-menu" role="menu" style="position:inherit;">
 								<li>
-									<a href="/login">로그인</a>
+									<a href="/">로그인</a>
 								</li>	
 							</ul>									
 						</li>

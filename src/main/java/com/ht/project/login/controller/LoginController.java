@@ -15,7 +15,7 @@ public class LoginController {
 	
 	@Autowired private LoginService service;
 	
-	@RequestMapping(value = "/login", method = RequestMethod.GET)
+	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String lolgin(Locale locale, Model model) {
 		String test = service.selectOne();
 		System.out.println("Mapper 확인 : "+ test);

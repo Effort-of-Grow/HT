@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,10 +34,8 @@ body {font-family: "Lato", sans-serif;}
 <title>로그인</title>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js" charset="utf-8"></script>
 <!------ Include the above in your HEAD tag ---------->
-<!-- 개발 스크립트. 도움되는 콘솔 경고를 포함. -->
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
 	<div class="sidenav">
@@ -52,16 +50,16 @@ body {font-family: "Lato", sans-serif;}
 			    <div style="width: 100%; display: flex;"> 
 				    <div style="width: 100%;">              
 						<div class="form-group">							
-							<label id="app">{{ title }}</label>
-							<input type="text" class="form-control" placeholder="User ID">
+							<label>아이디</label>
+							<input type="text" class="form-control" placeholder="User ID" id="userId">
 						</div>
 						<div class="form-group">
 							<label>비밀번호</label>
-							<input type="password" class="form-control" placeholder="Password">
+							<input type="password" class="form-control" placeholder="Password" id="password">
 						</div>
 					</div>
 					<div style="margin-right: 30%; margin-top: 10%;">
-						<button type="submit" class="btn btn-black" style="margin-left: 10px; width: 95px; height: 80px; margin-top:6px;">로그인</button>
+						<button type="button" id="loginBtn" class="btn btn-black" style="margin-left: 10px; width: 95px; height: 80px; margin-top:6px;">로그인</button>
 					</div>
 			    </div>                                
 				<button type="submit" class="btn btn-secondary" onclick="location.href='consentTerm'">회원가입</button>
@@ -72,11 +70,42 @@ body {font-family: "Lato", sans-serif;}
  	</div> 
 </body>
 <script>
-new Vue({
-  el: '#app', 
-  data: {
-    title: '아이디'
-  }   
-})
+// 로그인 버튼 클릭 시
+$("#loginBtn").click(function (){
+	// 아이디 가져오기
+	let userId = $("#userId").val();
+	// 비밀번호 가져오기
+	let password = $("#password").val();
+	
+	if(userId == null || userId == ''){
+		alert("아이디를 입력해주세요.");
+		return false;
+	}
+	if(password == null || password == ''){
+		alert("비밀번호를 입력해주세요.");
+		return false;
+	}
+	
+    // ajax 통신
+    $.ajax({
+        type : "POST",           	
+        url : "/login/userLogin",        
+        data : {userId:userId, password:password},            
+        success : function(res){        	
+        	// 로그인 성공
+        	if (res != ''){ 
+        		location.href="/home"
+        	}
+        	else {
+        		alert("로그인 실패 : 아이디 또는 비밀번호를 확인해주시기 바립니다.")	
+        	}
+        },
+        error : function(XMLHttpRequest, textStatus, errorThrown){ // 비동기 통신이 실패할경우 error 콜백으로 들어옵니다.
+            alert("오류발생. 관리자에게 문의해주시기 바랍니다.")
+        }
+    });
+	
+	
+});
 </script>
 </html>
