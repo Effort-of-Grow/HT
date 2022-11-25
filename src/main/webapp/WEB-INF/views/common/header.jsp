@@ -51,7 +51,10 @@
 <!-- Vue.js  -->
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
-
+<%
+	// 세션에 저장된 값 가죠오기
+	String userId = (String) session.getAttribute("userId");
+%>
 <!-- 헤더 파일 -->
 <header>
 	<div style="border-bottom: 1px solid #d3d3d3; vertical-align: middle; margin-bottom: 10px;">
@@ -60,10 +63,8 @@
 				<a href="${cpath }" style="color:black;">HOTEL</a>
 			</div>
 			<div style="display: flex;">
-				<div>
-					<a href="${cpath }/search">
-					 	<img height="40px" src="https://cdn.dailyhotel.com/ux/nav-search-ic@2x.png">
-					</a>
+				<div style="text-align: center;line-height: 45px;">
+					${sessionScope.userId}
 				</div>
 				<div class="navbar-collapse collapse">
 					<ul class="nav navbar-nav">
@@ -72,9 +73,19 @@
 								<img id="open_submenu" height="40px" src="https://cdn.dailyhotel.com/ux/nav-short-ic@2x.png">						
 							</a>
 							<ul class="dropdown-menu" role="menu" style="position:inherit;">
-								<li>
-									<a href="/">로그인</a>
-								</li>	
+								<c:if test="${sessionScope.userId eq null}">
+									<li>
+										<a href="/">로그인</a>
+									</li>	
+								</c:if>	
+								<c:if test="${not empty sessionScope.userId}">
+									<li>
+										<a href="">마이페이지</a>
+									</li>
+									<li>
+										<a href="/logout">로그아웃</a>
+									</li>
+								</c:if>
 							</ul>									
 						</li>
 					</ul>		
@@ -83,3 +94,16 @@
 		</div>
 	</div>
 </header>
+
+<script>
+$(document).ready(function(){
+	// 세션 가져오기
+	var sessionUserId = '${sessionScope.userId}';	
+	// 세션이 없을 시 로그인 페이지로 이동 	
+	if(sessionUserId == '' || sessionUserId == null){
+		alert("세션정보가 만료되었습니다. 다시 로그인해 주세요.")
+		location.href = "/";
+	}
+			
+});
+</script>

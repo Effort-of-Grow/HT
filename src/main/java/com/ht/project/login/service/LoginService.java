@@ -10,8 +10,7 @@ public class LoginService {
 
 	@Autowired private LoginMapper mapper;
 	
-	public String selectOne() {
-		System.out.println("==============확인 : ");		
+	public String selectOne() {			
 		return mapper.selectOne();
 	}
 

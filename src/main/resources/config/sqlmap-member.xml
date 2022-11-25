@@ -8,13 +8,25 @@
 	<select id="selectOne" resultType="String">
 		 SELECT ADDRESS  FROM TEST 
 	</select>
-	<select id="selectUser" resultType="String">
-		SELECT t.NAME 
+	<select id="selectUser" resultType="com.ht.project.login.model.LoginDto">
+		SELECT t.ID userId, t.NAME name 
 			FROM TEST t
 			WHERE
 				t.ID = #{userId} 
 			AND
 				t.PASSWORD = #{password}
+	</select>
+	<select id="selectUserId" resultType="String">
+		SELECT t.ID 
+			FROM TEST t 
+			WHERE 
+				t.EMAIL = #{email}
+	</select>
+	<select id="selectUserPw" resultType="String">
+		SELECT t.PASSWORD
+		  	FROM TEST t
+		  	WHERE 
+		  	  	t.ID = #{userId}
 	</select>
 </mapper>
 

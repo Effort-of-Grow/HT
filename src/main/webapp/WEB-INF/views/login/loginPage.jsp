@@ -32,8 +32,10 @@ body {font-family: "Lato", sans-serif;}
 </style>
 <meta charset="UTF-8">
 <title>로그인</title>
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js" charset="utf-8"></script>
 <!------ Include the above in your HEAD tag ---------->
 </head>
@@ -51,11 +53,11 @@ body {font-family: "Lato", sans-serif;}
 				    <div style="width: 100%;">              
 						<div class="form-group">							
 							<label>아이디</label>
-							<input type="text" class="form-control" placeholder="User ID" id="userId">
+							<input type="text" class="form-control" placeholder="User ID" id="userId" onkeyup="enterkey()">
 						</div>
 						<div class="form-group">
 							<label>비밀번호</label>
-							<input type="password" class="form-control" placeholder="Password" id="password">
+							<input type="password" class="form-control" placeholder="Password" id="password" onkeyup="enterkey()">
 						</div>
 					</div>
 					<div style="margin-right: 30%; margin-top: 10%;">
@@ -63,13 +65,20 @@ body {font-family: "Lato", sans-serif;}
 					</div>
 			    </div>                                
 				<button type="submit" class="btn btn-secondary" onclick="location.href='consentTerm'">회원가입</button>
-			    <button type="submit" class="btn btn-secondary">아이디 찾기</button>
-			    <button type="submit" class="btn btn-secondary">비밀번호 찾기</button>               
+					<button class="btn btn-secondary" data-toggle="modal" data-target="#selectUserIdModal">아이디 찾기</button>
+					<button class="btn btn-secondary" data-toggle="modal" data-target="#selectUserPwModal">비밀번호 찾기</button>			    
 		    </div>
 	    </div>
- 	</div> 
+ 	</div>
+ 	<%@ include file="../login/modal/selectUserIdPage.jsp" %> 
+ 	<%@ include file="../login/modal/selectUserPwPage.jsp" %> 
 </body>
 <script>
+function enterkey() {
+	if (window.event.keyCode == 13) {
+		$("#loginBtn").click();
+    }
+}
 // 로그인 버튼 클릭 시
 $("#loginBtn").click(function (){
 	// 아이디 가져오기
@@ -107,5 +116,8 @@ $("#loginBtn").click(function (){
 	
 	
 });
+</script>
+<script>
+
 </script>
 </html>

@@ -136,33 +136,8 @@
     		<groupId>org.springframework</groupId>
 	   		<artifactId>spring-jdbc</artifactId>
 		    <version>5.3.19</version>
-		</dependency>
-		
-		<dependency>
-		    <groupId>com.oracle.database.jdbc</groupId>
-		    <artifactId>ojdbc8</artifactId>
-		    <version>21.5.0.0</version>
-		</dependency>
-		
-		<dependency>
-		    <groupId>com.oracle.database.security</groupId>
-		    <artifactId>oraclepki</artifactId>
-		    <version>21.5.0.0</version>
-		</dependency>
-		
-		<dependency>
-		    <groupId>com.oracle.database.security</groupId>
-		    <artifactId>osdt_cert</artifactId>
-		    <version>21.5.0.0</version>
-		</dependency>
-		
-		<dependency>
-		    <groupId>com.oracle.database.security</groupId>
-		    <artifactId>osdt_core</artifactId>
-		    <version>21.5.0.0</version>
-		</dependency>
-	
-		
+		</dependency>		
+			
 		<!-- org.mybatis/mybatis-spring -->
 		<dependency>
 			<groupId>org.mybatis</groupId>
@@ -176,7 +151,11 @@
 			<artifactId>mybatis</artifactId>
 			<version>3.4.5</version>
 		</dependency>
-		
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.5.4</version>
+		</dependency>
 		
 				
 		
