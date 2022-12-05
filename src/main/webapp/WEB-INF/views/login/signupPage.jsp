@@ -6,6 +6,54 @@
 <meta charset="UTF-8">
 <br> 
 <title>🎉🎉회원가입🎉🎉</title>
+</head>
+<body>
+<h2 align="center">🎉🎉회원가입🎉🎉</h2>
+<form method="post" align="center" onsubmit="return checkAll()">
+<br> <br> <br> 
+	<table align="center">
+		<tr>
+			<td width="5%" align="center">*</td>
+			<td width="20%" >아이디</td>
+			<td><input type="text" maxlength="20" name="userId" ></td>
+			<td><button type="button">중복확인</td>
+		</tr>
+		<tr>
+			<td width="5%" align="center">*</td>
+			<td width="20%">비밀번호</td>
+			<td><input type="password" id="pw" name="password1" onchange="checkPw()"></td>
+		</tr>
+		<tr>
+			<td width="5%" align="center">*</td>
+			<td width="20%">비밀번호 확인</td>
+			<td><input type="password" id="pw2" name="password2" onchange="checkPw()">&nbsp;</td>
+			<td><span id="check"></span></td>
+		</tr>
+		<tr>
+			<td width="5%" align="center">*</td>
+			<td width="20%">이름</td>
+			<td><input type="text"></td>
+		</tr>
+		<tr>
+			<td width="5%" align="center">*</td>
+			<td width="20%">주민등록번호</td>
+			<td><input type="text"></td>
+		</tr>
+		<tr>
+			<td width="5%" align="center">*</td>
+			<td width="20%">이메일</td>
+			<td><input type="email"></td>
+		</tr>
+		<tr>
+			<td width="5%" align="center">*</td>
+			<td width="20%">휴대폰</td>
+			<td><input type="tel" placeholder="010-0000-0000"></td>
+		</tr>
+	</table>
+	<br> <br> <br> 
+	<input type="reset" value="다시 입력">
+	<input type="submit" value="완료" >		
+</form>
 <script>      
 		function checkPw() {
 			var pw = document.getElementById('pw').value;
@@ -39,53 +87,5 @@
 			}	
 		}
 </script>
-</head>
-<body>
-<h2 align="center">🎉🎉회원가입🎉🎉</h2>
-<form method="post" align="center" onsubmit="return checkAll()">
-<br> <br> <br> 
-	<table align="center">
-		<tr>
-			<td width="5%" align="center">*</td>
-			<td width="20%" >아이디</td>
-			<td><input type="text" maxlength="20" name="userId" ></td>
-			<td><button type="button">중복확인</td>
-		</tr>
-		<tr>
-			<td width="5%" align="center">*</td>
-			<td width="20%">비밀번호</td>
-			<td><input type="password" id="pw" name="password1" onchange="checkPw()"></td>
-		</tr>
-		<tr>
-			<td width="5%" align="center">*</td>
-			<td width="20%">비밀번호 확인</td>
-			<td><input type="password" id="pw2" name="password2" onchange="checkPw()">&nbsp;</td>
-			<td><span id="check"></span></td>
-		</tr>
-		<tr>
-			<td width="5%" align="center">*</td>
-			<td width="20%">이름</td>
-			<td><input type="text"></td>
-		</tr>
-		<tr>
-			<td width="5%" align="center">*</td>
-			<td width="20%">생년월일</td>
-			<td><input type="date"></td>
-		</tr>
-		<tr>
-			<td width="5%" align="center">*</td>
-			<td width="20%">이메일</td>
-			<td><input type="email"></td>
-		</tr>
-		<tr>
-			<td width="5%" align="center">*</td>
-			<td width="20%">휴대폰</td>
-			<td><input type="tel" placeholder="010-0000-0000"></td>
-		</tr>
-	</table>
-	<br> <br> <br> 
-	<input type="reset" value="다시 입력">
-	<input type="submit" value="완료" >		
-</form>
 </body>
 </html>

@@ -64,7 +64,7 @@ body {font-family: "Lato", sans-serif;}
 						<button type="button" id="loginBtn" class="btn btn-black" style="margin-left: 10px; width: 95px; height: 80px; margin-top:6px;">로그인</button>
 					</div>
 			    </div>                                
-				<button type="submit" class="btn btn-secondary" onclick="location.href='consentTerm'">회원가입</button>
+				<button type="submit" class="btn btn-secondary" onclick="joinAlert()">회원가입</button>
 					<button class="btn btn-secondary" data-toggle="modal" data-target="#selectUserIdModal">아이디 찾기</button>
 					<button class="btn btn-secondary" data-toggle="modal" data-target="#selectUserPwModal">비밀번호 찾기</button>			    
 		    </div>
@@ -116,8 +116,9 @@ $("#loginBtn").click(function (){
 	
 	
 });
-</script>
-<script>
-
+function joinAlert() {
+	alert("만 19세 이상부터 가입 가능합니다.");
+	location.href='consentTerm';
+}
 </script>
 </html>
